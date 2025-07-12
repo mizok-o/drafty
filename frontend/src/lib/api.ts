@@ -19,7 +19,6 @@ export async function getDocument(id: string): Promise<Document> {
 }
 
 export async function updateDocument(id: string, data: Partial<Document>): Promise<Document> {
-  console.log("aaあああああああああああ", data);
   
   const response = await fetch(`${API_BASE_URL}/documents/${id}`, {
     method: "PATCH",
@@ -31,7 +30,6 @@ export async function updateDocument(id: string, data: Partial<Document>): Promi
   if (!response.ok) {
     throw new Error("Failed to update document");
   }
-  console.log("リアルタイム更新");
   
   return response.json();
 }

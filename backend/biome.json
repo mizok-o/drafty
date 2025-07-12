@@ -11,12 +11,15 @@
       "**/*.jsx",
       "**/*.ts",
       "**/*.tsx",
-      "**/*.json",
+      "src/**/*.json",
       "**/*.jsonc",
       "**/*.css",
       "**/*.html",
       "**/*.vue",
-      "**/*.prisma"
+      "**/*.prisma",
+      "package.json",
+      "tsconfig.json",
+      "biome.json"
     ],
     "ignoreUnknown": false
   },

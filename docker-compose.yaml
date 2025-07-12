@@ -27,11 +27,13 @@ services:
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
       NODE_ENV: development
+      BACKEND_PORT: ${BACKEND_PORT}
+      FRONTEND_URL: ${FRONTEND_URL}
     depends_on:
       - postgres
     volumes:
       - ./backend:/app
-      - /app/node_modules
+      - ./backend/node_modules:/app/node_modules
     networks:
       - drafty-network
     command: sh -c "npx prisma generate && npx prisma migrate deploy && npm run start:dev"

@@ -82,7 +82,16 @@
     "**/*.{js,jsx,ts,tsx}": [
       "npx @biomejs/biome check --write"
     ],
-    "**/*.{json,jsonc}": [
+    "src/**/*.{json,jsonc}": [
+      "npx @biomejs/biome format --write"
+    ],
+    "package.json": [
+      "npx @biomejs/biome format --write"
+    ],
+    "tsconfig*.json": [
+      "npx @biomejs/biome format --write"
+    ],
+    "biome.json": [
       "npx @biomejs/biome format --write"
     ]
   },
