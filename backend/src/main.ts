@@ -1,12 +1,14 @@
 import { NestFactory } from "@nestjs/core";
+import { WsAdapter } from "@nestjs/platform-ws";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import { AppModule } from "./app.module";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  
+  app.useWebSocketAdapter(new WsAdapter(app));
+
   app.enableCors({
-    origin: "http://localhost:3001",
+    origin: process.env.FRONTEND_URL,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
   });
@@ -19,8 +21,6 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup("api", app, document);
 
-  await app.listen(process.env.PORT ?? 3000);
-  console.log(`Application is running on: http://localhost:${process.env.PORT ?? 3000}`);
-  console.log(`Swagger UI is available at: http://localhost:${process.env.PORT ?? 3000}/api`);
+  await app.listen(Number(process.env.BACKEND_PORT) || 3000);
 }
 bootstrap();
