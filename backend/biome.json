@@ -16,7 +16,7 @@
       "**/*.css",
       "**/*.html",
       "**/*.vue",
-      "**/*.svelte"
+      "**/*.prisma"
     ],
     "ignoreUnknown": false
   },
