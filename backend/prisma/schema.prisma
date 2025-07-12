@@ -23,6 +23,8 @@ model User {
   
   // リレーション例
   documents  Document[]
+  
+  @@map("users")
 }
 
 model Document {
@@ -36,4 +38,6 @@ model Document {
   
   // リレーション
   user    User     @relation(fields: [userId], references: [id])
+  
+  @@map("documents")
 }
