@@ -27,7 +27,7 @@
     "enabled": true,
     "actions": {
       "source": {
-        "organizeImports": "on"
+        "organizeImports": "off"
       }
     }
   },
@@ -36,7 +36,8 @@
     "rules": {
       "recommended": true,
       "style": {
-        "noNonNullAssertion": "off"
+        "noNonNullAssertion": "off",
+        "useImportType": "off"
       },
       "suspicious": {
         "noExplicitAny": "warn"

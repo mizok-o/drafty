@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
-import type { EventEmitter2 } from "@nestjs/event-emitter";
-import type { PrismaService } from "../prisma/prisma.service";
+import { EventEmitter2 } from "@nestjs/event-emitter";
+import { PrismaService } from "../prisma/prisma.service";
 import type { DocumentUpdatedEvent } from "../types/events";
 import type { CreateDocumentDto } from "./dto/create-document.dto";
 import type { UpdateDocumentDto } from "./dto/update-document.dto";
