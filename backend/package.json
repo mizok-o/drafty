@@ -75,10 +75,10 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "npx @biomejs/biome check --fix --no-errors-on-unmatched"
+      "npx @biomejs/biome check --fix"
     ],
     "**/*.{json,jsonc}": [
-      "npx @biomejs/biome format --write --no-errors-on-unmatched"
+      "npx @biomejs/biome format --write"
     ]
   },
   "jest": {
