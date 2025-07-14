@@ -35,6 +35,7 @@ export class WebSocketGateway implements OnGatewayConnection, OnGatewayDisconnec
           data: {
             documentId: event.documentId,
             content: event.content,
+            source: "remote",
           },
         })
       );
