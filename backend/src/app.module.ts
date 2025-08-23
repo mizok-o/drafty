@@ -1,12 +1,12 @@
 import { Module } from "@nestjs/common";
-import { AppController } from "./app.controller";
-import { AppService } from "./app.service";
+import { EventEmitterModule } from "@nestjs/event-emitter";
 import { DocumentModule } from "./document/document.module";
 import { PrismaModule } from "./prisma/prisma.module";
+import { WebSocketModule } from "./websocket/websocket.module";
 
 @Module({
-  imports: [DocumentModule, PrismaModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [EventEmitterModule.forRoot(), DocumentModule, WebSocketModule, PrismaModule],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

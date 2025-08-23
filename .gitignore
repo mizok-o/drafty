@@ -64,5 +64,4 @@ temp/
 *.temp
 
 # Project specific
-frontend/
 .claude/

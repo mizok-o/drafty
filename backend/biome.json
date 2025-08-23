@@ -11,12 +11,15 @@
       "**/*.jsx",
       "**/*.ts",
       "**/*.tsx",
-      "**/*.json",
+      "src/**/*.json",
       "**/*.jsonc",
       "**/*.css",
       "**/*.html",
       "**/*.vue",
-      "**/*.prisma"
+      "**/*.prisma",
+      "package.json",
+      "tsconfig.json",
+      "biome.json"
     ],
     "ignoreUnknown": false
   },
@@ -24,7 +27,7 @@
     "enabled": true,
     "actions": {
       "source": {
-        "organizeImports": "on"
+        "organizeImports": "off"
       }
     }
   },
@@ -33,7 +36,8 @@
     "rules": {
       "recommended": true,
       "style": {
-        "noNonNullAssertion": "off"
+        "noNonNullAssertion": "off",
+        "useImportType": "off"
       },
       "suspicious": {
         "noExplicitAny": "warn"

@@ -22,13 +22,8 @@ export class DocumentController {
     return this.documentService.findOne(+id);
   }
 
-  @Put(':id')
+  @Patch(':id')
   update(@Param('id') id: string, @Body() updateDocumentDto: UpdateDocumentDto) {
     return this.documentService.update(+id, updateDocumentDto);
-  }
-
-  @Patch(':id/publish')
-  publish(@Param('id') id: string) {
-    return this.documentService.publish(+id);
   }
 }
