@@ -4,5 +4,5 @@ export default function Home() {
       <h1>Drafty</h1>
       <p>ドキュメント管理アプリケーション</p>
     </main>
-  )
+  );
 }
