@@ -1,5 +1,6 @@
 ---
-inclusion: always
+inclusion: manual
+contextKeys: ["code-review", "コードレビュー", "review", "レビュー", "PR", "pull-request"]
 ---
 
 # AI Code Review Guidelines
